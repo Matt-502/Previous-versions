@@ -13,5 +13,8 @@ class Property < ApplicationRecord
   validates :user_id, presence: true
   mount_uploader :image, ImageUploader
   validates :prefecture_code, presence: true
+
+  extend ActiveHash::Associations::ActiveRecordExtensions
+ belongs_to_active_hash :prefecture
   
 end

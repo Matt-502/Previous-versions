@@ -4,19 +4,19 @@
 <div class="main">
   <h1>物件一覧</h1>
   <div class="search-index">
-    <%= search_form_for(@q, url:properties_path, method: :get) do |f| %>
-      <%= f.label :title_or_description_or_prefecture_code, '趣味' %>
-      <%= f.search_field :title_or_description_or_prefecture_code_cont %>
+    <%#= search_form_for(@q, url:properties_path, method: :get) do |f| %>
+      <%#= f.label :title_or_description_or_prefecture_code, '趣味' %>
+      <%#= f.search_field :title_or_description_or_prefecture_code_cont %>
       
-      <%= f.label :prefecture_code, '都道府県' %>
-      <%= f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :code, :name %>
+      <%#= f.label :prefecture_code, '都道府県' %>
+      <%#= f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :code, :name %>
       
-      <%= f.label :price, '価格' %>
-      <%= f.number_field :price_gteq %>
-      <%= f.number_field :price_lteq %>
+      <%#= f.label :price, '価格' %>
+      <%#= f.number_field :price_gteq %>
+      <%#= f.number_field :price_lteq %>
       
-      <%= f.submit "検索" %>
-    <% end %>
+      <%#= f.submit "検索" %>
+    <%# end %>
     
   </div>
   <div class="property-index">

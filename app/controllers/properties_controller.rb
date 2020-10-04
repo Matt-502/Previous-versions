@@ -21,6 +21,7 @@ class PropertiesController < ApplicationController
   # GET /properties/new
   def new
     @property = Property.new
+    @prefecture = Prefecture.new
   end
 
   # GET /properties/1/edit
