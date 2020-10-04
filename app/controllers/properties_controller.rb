@@ -4,15 +4,21 @@ class PropertiesController < ApplicationController
   # GET /properties
   # GET /properties.json
   def index
-    if params[:q]
-      @q = Property.ransack(params[:q])
-      @properties = @q.result(distinct: true)
-    else
-      # @q = Property.ransack(params[:q])
-      @properties = Property.all.order(created_at: :desc)
-    end
+    @properties = Property.all.order(created_at: :desc)
   end
 
+def search
+  if params[:q]
+    @q = Property.ransack(params[:q])
+    @properties = @q.result(distinct: true)
+  else
+    # @q = Property.ransack(params[:q])
+    @properties = Property.all.order(created_at: :desc)
+  end
+end
+
+
+  
   # GET /properties/1
   # GET /properties/1.json
   def show
