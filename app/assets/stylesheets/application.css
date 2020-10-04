@@ -1,0 +1,146 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ 
+ 
+/* 共通レイアウト ================================ */
+ 
+body {
+  width: 100%;
+  font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "A-OTF 新ゴ Pro",A-OTF Shin Go Pro,Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;  color: #2d3133;
+  margin: 0;
+  color: #505157;
+} 
+ 
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #2d3040;
+}
+
+
+/* ヘッダー ================================ */
+header {
+  height: 64px;
+  margin: 0;
+}
+
+header a {
+  display: block;
+  height: 64px;
+}
+
+
+
+
+.header-logo {
+  float: left;
+  padding-left: 45px;
+  position: relative;
+  color: #3c66ba;
+  font-size: 23px;
+  font-weight: bold;
+  line-height: 64px;
+}
+
+
+.header-logo p {
+  color: #2d3040;
+  line-height: 11px;
+  font-size: 11px;
+  position: absolute;
+  top: 38px;
+}
+
+.header-logo a:visited {
+  color: #3c66ba;
+}
+
+
+.header-menus {
+  margin: 0;
+  float: right;
+  padding-right: 30px;
+}
+
+
+
+.header-menus > li {
+  list-style:  none;
+  float: left;
+  line-height: 64px;
+  width: 60px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #505157;
+  padding: 0px 16px;
+  border-right: 1px solid #141414;
+}
+
+
+.header-menus li:hover {
+  border-bottom: solid 3px #ffd17d;
+  /*background-color: #ffd17d;*/
+}
+
+
+
+.mymenu {
+	border-radius: 0 0 4px 4px;
+	background-color: white;
+	display: none;
+	margin: 0;
+	opacity: 0;
+	position: absolute;
+  right: 20px;
+	width: 125px;
+	visibility: hidden;
+	z-index: 100;
+}
+
+.mymenu ul {
+  padding-left: 0 ;
+}
+
+.mymenu li{
+  list-style:  none;
+  border-bottom: 1px solid #dedede;
+}
+
+
+.header-menus li:hover .mymenu {
+  display: block;
+	opacity: 1;
+	visibility: visible;
+}
+
+
+.header-hello {
+  float: right;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 15px;
+  width: 50px;
+}
+
+.header-hello div {
+  margin: 0px;
+  width: 50px;
+  height: 20px;
+  overflow: hidden;
+}

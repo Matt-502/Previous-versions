@@ -1,0 +1,20 @@
+<div id="top">
+  <h1>趣味 × 不動産</h1>
+  <h3>地方移住　別宅　趣味の拠点</h3>
+  <h3>ライフスタイルに合わせた</h3>
+  <h3>新しい不動産の楽しみ方</h3>
+  
+  
+  <div class="top-search">
+    <%= search_form_for(@q, url:properties_path, method: :get) do |f| %>
+      <%= f.label :title_or_description_or_prefecture_code, '趣味' %>
+      <%= f.search_field :title_or_description_cont %>
+   
+
+   
+      <%= f.label :title_or_description_or_prefecture_code, 'フリーワード' %>
+      <%= f.search_field :title_or_description_cont %>
+      <%= f.submit "検索" %>
+    <% end %>
+  </div>
+</div>
