@@ -6,7 +6,7 @@
   
   
   <div class="top-search">
-    <%= search_form_for(@q, url:properties_path, method: :get) do |f| %>
+    <%= search_form_for(@q, url:search_path, method: :get) do |f| %>
       <%= f.label :title_or_description_or_prefecture_code, '趣味' %>
       <%= f.search_field :title_or_description_cont %>
    

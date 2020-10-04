@@ -1,4 +1,3 @@
-source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
@@ -37,7 +36,7 @@ gem 'mini_magick'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'ransack'
-
+gem 'active_hash'
 gem 'jquery-rails'
 
 
