@@ -1,0 +1,153 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+  
+body {
+  width: 100%;
+  font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "A-OTF 新ゴ Pro",A-OTF Shin Go Pro,Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  color: #000000;
+  margin: 0;
+} 
+
+
+
+/* ヘッダー ================================ */
+header {
+  height: 65px;
+  margin: 0;
+}
+
+header a {
+  text-decoration: none;
+  color: #505157;
+}
+
+header a:hover {
+  background-color: white;
+}
+
+a:visited {
+  color: #505157;
+}
+
+.header-logo {
+  float: left;
+  padding-left: 45px;
+  position: relative;
+  color: #1e73be;
+  font-size: 23px;
+  font-weight: bold;
+  line-height: 56px;
+}
+
+
+.header-logo p {
+  color: #505157;
+  line-height: 11px;
+  font-size: 11px;
+  position: absolute;
+  top: 34px;
+}
+
+.header-logo a:visited {
+  color: #1e73be;
+}
+
+
+.header-menus {
+  
+  list-style:  none;
+  margin: 20px auto;
+  float: right;
+  padding-right: 80px;
+  color: #505157;
+}
+
+
+
+.header-menus > li {
+  display: block;
+  float: left;
+  line-height: 28px;
+  width: 100px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  /* border-right: 1px solid #141414; */
+}
+
+.header-menus  li  a{
+  display: block;
+
+}
+
+
+.header-menus li:hover {
+  border-bottom: solid 4px #1e73be;
+}
+
+.header-menus-menu {
+  position: relative;
+}
+
+.header-menus-mymenu {
+  border-radius: 0 0 4px 4px;
+  background-color: white;
+  display: none;
+  padding-left: 0px;
+  position: absolute;
+  right: -37px;
+  top: 33px;
+  visibility: hidden;
+  z-index: 100;
+  list-style:  none;
+  
+}
+
+
+.header-menus-mymenu li{
+  line-height: 65px;
+  text-align: center;
+  width: 180px;
+  font-size: 14px;
+  /*border-bottom: 1px solid #dedede;*/
+}
+
+.header-menus-mymenu li a{
+  display: block;
+}
+
+
+.header-menus-menu:hover .header-menus-mymenu {
+  display: block;
+	opacity: 1;
+	visibility: visible;
+}
+
+
+.header-username {
+  float: right;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 17px;
+  width: 100px;
+}
+
+.header-username div {
+  margin: 0px;
+  height: 20px;
+  overflow: hidden;
+}

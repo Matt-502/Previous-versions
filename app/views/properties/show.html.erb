@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <% if @property.image? %>
+    <%= image_tag @property.image.url%>
+  <% else %>
+    <%= image_tag "noimage.png" %>
+  <% end %>
+</p>
+
+<p>
+  <strong>Prefecture:</strong>
+  <%= @property.prefecture %>
+</p>
+
+<p>
+  <strong>Prefecture:</strong>
+  <%= @property.prefecture_id %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @property.address %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @property.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @property.description %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @property.details %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @property.price %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @property.user_id %>
+</p>
+
+<% if user_signed_in? && current_user.id == @property.user_id %>
+    <%= link_to "編集", edit_property_path(@property) %>
+    <%= link_to "削除", property_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<% end %>
+
+<br>
+<%= link_to '一覧へ', properties_path %>

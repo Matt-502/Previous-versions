@@ -1,0 +1,283 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.main {
+  position: absolute;
+  top: 80px;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  background-color: #f5f8fa;
+  z-index: 1;
+}
+
+#top{
+	background-image: url("shutterstock_1364613956.png");
+	background-repeat: no-repeat;
+	background-position: center 0px;
+	background-size: cover;
+	width: 100%;
+	height: 495px;
+  padding-top: 50px;
+	margin: 3px auto 50px;
+	display: block;
+}
+
+.copy {
+  size: 62px;
+  margin: 0 auto;
+  display: block;
+}
+
+.copysmall {
+  size: 22px;
+  margin: 30px auto;
+  display: block;
+}　　
+
+
+// h1{
+//   font-size: 60px;
+//   color: white;
+//   text-align:center;
+//   margin: 0;
+// }
+
+// h3{
+//   text-align:center;
+//   color: white;
+//   line-height: 15px;
+// }
+
+
+.top-search {
+  width: 650px;
+  height: 190px;
+  margin: 30px auto;
+  padding: 30px;
+  background: rgba(#FFFFFF,0.8);
+}
+
+.top-search-letter {
+  color: #bfba1f;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.34em;
+  text-align: center;
+  margin: 0;
+}
+
+.top-search-item-up{
+  margin: 30px auto;
+  width: 420px;
+}
+
+.top-search-item-down{
+  margin: 0 auto;
+  width: 350px;
+}
+
+.top-search-button{
+  display: block;
+  color: #ffffff;
+  font-size: 18px;
+  height: 32px;
+  border-radius: 10px;
+  background-color: #bfba1f;
+  transition: 0.2s;
+  margin: 30px auto;
+  width: 150px;
+  
+}
+
+.top-search-button:hover {
+  opacity: 0.8;
+}
+
+.top-search-button:active {
+  transform: translateY(2px);
+}
+
+
+.select-box{
+  width: 200px;
+}
+
+
+.search-box{
+  width: 350px;
+  display: block;
+  text-align: center;
+}
+
+
+.message {
+  font-size: 22px;
+  line-height: 40px;
+  text-align: center;
+}
+
+h5 {
+  margin-top: 200px;
+  margin-bottom: 80px;
+  font-size: 32px;
+  color: #3c66ba;
+  font-weight: bold;
+  letter-spacing: 0.40em;
+  text-align: center;
+}
+
+
+.recommend {
+  height: 200px;
+  margin: 0px 70px;
+}
+
+.recommend-list {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+
+.recommend-list img {
+  display: block;
+  margin: 0 auto;
+}
+
+.recommend-list p {
+  font-size: 20px;
+  margin-top: 35px;
+}
+
+.new-properties {
+  height: 250px;
+  margin: 40px 70px;
+}
+
+.new-property {
+  float: left;
+  width: 33%;
+}
+
+
+.about {
+  width: 915px;
+  margin: 0 auto;
+  padding-left: 0px;
+  list-style: none;
+  overflow: hidden;
+}
+
+.about li {
+  float: left;
+  background-image: url("スタンダードな家アイコン.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+  padding: 30px 0px 35px 185px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.more {
+  margin: 50px;
+  text-align: center;
+}
+
+.more a {
+  text-decoration: none;
+  background-color: #bfba1f;
+  color: white;
+  border-radius: 5px;
+  padding: 18px 140px;
+  font-size: 18px;
+}
+
+.more a:hover {
+  background-color: #bfba1f;
+}
+
+.more a:visited {
+  color: white;
+}
+
+
+.feature {
+  width: 950px;
+  height: 330px;
+  margin: 0 auto;
+}
+
+.feature-list {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+.feature-list img {
+  height: 240px;
+  width: 280px;
+  display: block;
+  margin: 0 auto;
+}
+
+.feature-list p {
+  padding: 0 30px;
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 45px;
+}
+
+.support {
+  width: 860px;
+  margin: 0 auto;
+  background-image: url("初心者マークのアイコン素材.png");
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+.support p {
+  padding: 20px 0 20px 155px;
+  font-size: 20px;
+  line-height: 30px;
+  margin :0;
+}
+
+table{
+  border-collapse:separate;
+  border-spacing: 35px;
+  width: 950px;
+  margin: 0 auto;
+}
+
+table td{
+  width: 150px;
+  border-radius: 5px;
+  padding: 20px 14px;
+  font-size: 18px;
+  border:solid 3px #3c66ba;
+  color: #3c66ba;
+}
+
+.info {
+  width: 900px;
+  height: 330px;
+  margin: 0 auto;
+}
+
+.blog-seminar {
+  float: left;
+  width: 50%;
+  border:solid 0.5px #3c66ba;
+  padding: 0px 20px;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+}
+
+
+.blog-seminar p {
+  font-size: 20px;
+  line-height: 30px;
+  overflow: hidden;
+  border-bottom: solid 2px #3c66ba;;
+}

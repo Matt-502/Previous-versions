@@ -1,0 +1,73 @@
+<%= form_with(model: property, local: true) do |form| %>
+  <% if property.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(property.errors.count, "error") %> prohibited this property from being saved:</h2>
+
+      <ul>
+        <% property.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :prefecture, '都道府県' %>
+    <%= form.text_field :prefecture %>
+  </div>
+
+  <div class="field">
+    <%= form.label :municipality, '市区町村' %>
+    <%= form.text_field :municipality %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address, '町名番地・建物部屋番号' %>
+    <%= form.text_field :address %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :location, 'ロケーション' %>
+    <%= form.text_field :location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hobby, '趣味' %>
+    <%= form.text_field :hobby %>
+  </div>
+
+   <div class="field">
+    <%= form.label :layout, '間取り' %>
+    <%= form.text_field :layout %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title, 'タイトル' %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description, '物件説明' %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :details, '物件概要' %>
+    <%= form.text_field :details %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price, '希望価格' %>
+    <%= form.number_field :price %>
+  </div>
+
+  <div class="field">　　　　<%# 追加 %>　
+    <%= form.label :image, '写真' %>
+    <%= form.file_field :image %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

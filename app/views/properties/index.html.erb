@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<div class="main">
+  <h1>物件一覧</h1>
+  <div class="search-index">
+    
+    
+  </div>
+  <div class="property-index">
+    <% @properties.each do |property| %>
+      <div class="property-index-item">
+        <h3><%= link_to property.title, property %></h3>
+        <% if property.image? %>
+          <%= image_tag property.image.url, class: 'image-index'%>
+        <% else %>
+          <%= image_tag "noimage.png" %>
+        <% end %>
+        <%= property.description %>
+        <%= property.details %>
+        <%= property.price %>
+
+        <%= property.prefecture %>
+        <%= property.hobby %>
+        <%= property.layout %>
+        <%= property.location %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fsb</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="discription" content="不動産を気軽に、身近に売買できる。不動産×趣味のマッチングサイト。">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-logo">
+        <%= link_to 'FREE STYLE BASE', "/" %>
+        <p>趣味×不動産のマッチングサイト</p>
+      </div>
+      <ul class="header-menus">
+        <li>
+          <%= link_to 'FSBとは', "/about" %>
+        </li>
+        <li>
+          <%= link_to '物件一覧', properties_path %>
+        </li>
+        
+        <% if user_signed_in? %>
+          <li>
+            <%= "通知"%>
+          </li>
+          <li class="header-menus-menu">
+            <%= "メニュー" %>
+            
+            <ul class="header-menus-mymenu">
+              <li>
+                <%= 'お気に入り' %>
+              </li>
+              <li>
+                <%= link_to '物件を売る', new_property_path %>
+              </li>
+              <li>
+                <%= '出品した物件' %> 
+              </li>
+              <li>
+                <%= '買付物件' %>
+              </li>
+              <li>
+                <%= link_to 'ユーザー編集', edit_user_registration_path %>
+              </li>
+              <li>
+                <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+              </li>
+            </ul>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to '新規登録', new_user_registration_path %>
+          </li>
+          <li>
+            <%= link_to 'ログイン', new_user_session_path %>
+          </li>
+        <% end %>
+      </ul>
+      <div class="header-username">
+        <% if user_signed_in? %>
+          <div><%= current_user.id %></div>
+          <span>さん</span>
+        <% end %>
+      </div>
+    </header>
+  
+    <%# <p class="notice"><%= notice %><%#</p> %>
+    <%# <p class="alert"><%= alert %><%#</p> %>
+    
+    
+    <%= yield %>
+  </body>
+</html>
